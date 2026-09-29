@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register
+{% endblock %}
+
+
+{% block content %}
+
+<div class="form-card">
+
+    <h1>
+        Create your account
+    </h1>
+
+    <form id="registerForm">
+
+        <label>
+            Name
+
+            <input
+                name="name"
+                minlength="2"
+                required
+            >
+        </label>
+
+
+        <label>
+            Email
+
+            <input
+                type="email"
+                name="email"
+                required
+            >
+        </label>
+
+
+        <label>
+            Password
+
+            <input
+                type="password"
+                name="password"
+                minlength="6"
+                required
+            >
+        </label>
+
+
+        <button class="btn">
+            Register
+        </button>
+
+
+        <p id="msg"></p>
+
+    </form>
+
+
+    <p>
+        Already registered?
+
+        <a href="/login">
+            Login
+        </a>
+    </p>
+
+</div>
+
+{% endblock %}

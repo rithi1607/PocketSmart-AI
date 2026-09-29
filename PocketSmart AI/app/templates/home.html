@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <span class="pill">
+        Home Planner
+    </span>
+
+    <h1>
+        Design your space within budget
+    </h1>
+
+</div>
+
+
+<div class="form-card">
+
+    <form id="homeForm">
+
+        <label>
+            Budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+            >
+        </label>
+
+
+        <label>
+            Room
+
+            <select name="room">
+
+                <option>
+                    Living Room
+                </option>
+
+                <option>
+                    Bedroom
+                </option>
+
+                <option>
+                    Kitchen
+                </option>
+
+                <option>
+                    Dining Room
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Style
+
+            <select name="style">
+
+                <option>
+                    Modern
+                </option>
+
+                <option>
+                    Minimal
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Bohemian
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Items
+
+            <small>
+                Enter one per line:
+                category | quantity | notes
+            </small>
+
+            <textarea
+                name="items"
+                required
+                placeholder="Ceiling light | 2 | warm white
+Dining table | 1 | 4 seater
+Wall art | 3 | neutral tones"
+            ></textarea>
+
+        </label>
+
+
+        <button class="btn">
+            Generate Recommendations
+        </button>
+
+
+        <p id="msg"></p>
+
+    </form>
+
+</div>
+
+
+<div
+    id="output"
+    class="results"
+></div>
+
+{% endblock %}
